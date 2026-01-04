@@ -1,0 +1,44 @@
+{
+  "cascadeColors": true,
+  "colorBackground": false,
+  "palette": [
+    {
+      "id": "7AQyukgqwCzKkHJzP4-S2",
+      "name": "#373F51",
+      "value": "#373f51"
+    },
+    {
+      "id": "S5FcarVEbMjDWIbihRV2N",
+      "name": "#BCF4DE",
+      "value": "#bcf4de"
+    },
+    {
+      "id": "28pFStFq0Gdxx1kCoALCG",
+      "name": "#42A5F5",
+      "value": "#42a5f5"
+    },
+    {
+      "id": "JeJgzTAJe9scOFG_4RUCz",
+      "name": "#FFCA28",
+      "value": "#ffca28"
+    }
+  ],
+  "fileColors": [
+    {
+      "path": "_assets",
+      "color": "7AQyukgqwCzKkHJzP4-S2"
+    },
+    {
+      "path": "README.md",
+      "color": "28pFStFq0Gdxx1kCoALCG"
+    },
+    {
+      "path": "javascript",
+      "color": "JeJgzTAJe9scOFG_4RUCz"
+    },
+    {
+      "path": "__assets",
+      "color": "7AQyukgqwCzKkHJzP4-S2"
+    }
+  ]
+}

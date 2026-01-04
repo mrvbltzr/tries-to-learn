@@ -1,0 +1,64 @@
+body {
+    --inline-title-size: var(--h5-size);
+    --table-cell-vertical-alignment: middle;
+    --code-border-color: color-mix(in srgb, var(--code-background), var(--color-base-100) 10%);
+    --code-radius: 0.6rem;
+    --code-border-width: 1px;
+}
+
+.workspace-tab-header,
+.workspace-tab-header-inner,
+.workspace-tab-container-before,
+.workspace-tab-container-after {
+    transition: background-color 100ms linear;
+}
+
+.markdown-preview-section .inline-title {
+    display: none;
+}
+
+.markdown-preview-view ol > li,
+.markdown-preview-view ul > li {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+}
+
+.markdown-rendered ul ul,
+.markdown-rendered ol ul,
+.markdown-rendered ul ol,
+.markdown-rendered ol ol {
+    margin-block-start: var(--p-spacing);
+}
+
+.markdown-rendered table {
+    margin-block-start: var(--size-4-2);
+    margin-block-end: var(--size-4-2);
+}
+
+.markdown-rendered table,
+.markdown-source-view.mod-cm6 .cm-table-widget .table-wrapper {
+    width: 100%;
+}
+
+.markdown-source-view.mod-cm6 .cm-table-widget .table-cell-wrapper {
+    height: auto;
+}
+
+.cm-html-embed td,
+.markdown-rendered td,
+.cm-html-embed th,
+.markdown-rendered th,
+.markdown-source-view.mod-cm6 .cm-table-widget .table-cell-wrapper {
+    padding: var(--size-4-2);
+}
+
+.markdown-rendered h2,
+.HyperMD-header-2 {
+    border-bottom: 4px dotted color-mix(in srgb, var(--hr-color), var(--color-base-100) 20%);
+    padding-bottom: calc(var(--p-spacing) / 2) !important;
+}
+
+.inline-title {
+    margin-block-end: calc(var(--inline-title-margin-bottom) * 3);
+    text-align: center;
+}

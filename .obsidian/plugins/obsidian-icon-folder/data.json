@@ -1,0 +1,42 @@
+{
+  "settings": {
+    "migrated": 6,
+    "iconPacksPath": ".obsidian/icons",
+    "fontSize": 16,
+    "emojiStyle": "native",
+    "iconColor": null,
+    "recentlyUsedIcons": [
+      "TiPhotoCode",
+      "TiTemplate",
+      "TiBrandJavascript",
+      "TiAsset",
+      "TiFolders"
+    ],
+    "recentlyUsedIconsSize": 5,
+    "rules": [],
+    "extraMargin": {
+      "top": 0,
+      "right": 4,
+      "bottom": 0,
+      "left": 0
+    },
+    "iconInTabsEnabled": true,
+    "iconInTitleEnabled": true,
+    "iconInTitlePosition": "inline",
+    "iconInFrontmatterEnabled": false,
+    "iconInFrontmatterFieldName": "icon",
+    "iconColorInFrontmatterFieldName": "iconColor",
+    "iconsBackgroundCheckEnabled": true,
+    "iconsInNotesEnabled": false,
+    "iconsInLinksEnabled": false,
+    "iconIdentifier": ":",
+    "lucideIconPackType": "none",
+    "debugMode": false,
+    "useInternalPlugins": false
+  },
+  "README.md": "TiInfoCircle",
+  "__assets": "TiAsset",
+  "__assets/userscripts": "TiBrandJavascript",
+  "__assets/templates": "TiTemplate",
+  "__assets/images": "TiPhotoCode"
+}

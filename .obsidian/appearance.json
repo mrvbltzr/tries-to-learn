@@ -1,0 +1,11 @@
+{
+  "baseFontSize": 16,
+  "cssTheme": "Nightfox",
+  "accentColor": "",
+  "nativeMenus": true,
+  "showViewHeader": true,
+  "enabledCssSnippets": [
+    "mod"
+  ],
+  "theme": "system"
+}
