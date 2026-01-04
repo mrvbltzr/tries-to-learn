@@ -10,11 +10,19 @@
 </div>
 
 <div align="center">
+<br /><br />
+<h2>✒️ I take notes... seriously!</h2>
+<a href="#"><img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExY3VtbWJqb3czMmowdzlyeTBuYzd4a2YxdjN4Z2IyaWl5dWYwMGFuNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/jIZWWPYj2HfEI/giphy.gif" width="130" /></a>
 <br />
-<br />
+</div>
+
+My notes are written using [Obsidian](https://obsidian.md/) and are best viewed within that application. I want to apologize in advance if you find any grammatical errors in my notes, as English is not my first language and is currently a work in progress.
+
+<div align="center">
+<br /><br />
 <h2>🔌 Plug it in!</h2>
 <div>
-<img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDN3eTFjbzYwemtyNzZ3a2NmbDN2NTVqZTJnN3J5NXRxOHd0b3g1bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/82V7aEFGb2fU0ohIGt/giphy.gif" width="160" />
+<a href="#"><img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDN3eTFjbzYwemtyNzZ3a2NmbDN2NTVqZTJnN3J5NXRxOHd0b3g1bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/82V7aEFGb2fU0ohIGt/giphy.gif" width="160" /></a>
 </div>
 <br />
 </div>
