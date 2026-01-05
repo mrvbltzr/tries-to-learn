@@ -38,5 +38,6 @@
   "__assets": "TiAsset",
   "__assets/userscripts": "TiBrandJavascript",
   "__assets/templates": "TiTemplate",
-  "__assets/images": "TiPhotoCode"
+  "__assets/images": "TiPhotoCode",
+  "javascript": "TiBrandJavascript"
 }
