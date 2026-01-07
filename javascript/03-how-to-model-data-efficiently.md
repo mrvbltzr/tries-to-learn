@@ -155,6 +155,9 @@ mySong[1]; // "u"
 mySong[11]; // undefined
 ```
 
+> [!info] MARK'S NOTE
+> Isipin na lang natin na para tayong nagbibilang ng letters sa string pero starting from 0.
+
 ### The `length` Property
 
 - Every string has a built-in property called **`length`** which stores the total number of characters in that string.
@@ -194,6 +197,9 @@ faveSong[0] = "D";
 console.log(faveSong); // "Surfin USA"
 ```
 
+> [!info] MARK'S NOTE
+> **immutable** = hindi nababago
+
 ### String Methods
 
 - **Methods** are built-in pieces of functionality or actions that we can perform on specific values, such as strings or numbers.
@@ -223,7 +229,7 @@ string.toLowerCase();
 let message = "you are so grounded mister";
 
 // Returns a new uppercase version
-let yel = message.toUpperCase(); 
+let yell = message.toUpperCase(); 
 
 // Original message is unchanged unless we reassign it
 message = message.toUpperCase(); 
@@ -599,6 +605,12 @@ Math.floor(Math.random() * 10) + 1;
 Math.floor(Math.random() * 6) + 1;
 ```
 
+> [!info] MARK'S NOTE
+> **inclusive** = kasama
+> **exclusive** = hindi kasama
+>
+> Meaning, dahil inclusive ang `0`, kasama ito sa randomization, while hindi naman kasama ang `1`. Ang range lang ng randomization ay from `0` to `0.9999999999999999`. Hindi ito mag-ge-generate ng exact `1`.
+
 ## The `typeof` Operator
 
 ```js
@@ -646,7 +658,7 @@ typeof null; // "object"
 
 ## The `parseInt` and `parseFloat`
 
-### parseInt
+### `parseInt`
 
 ```js
 /* Syntax: */
@@ -681,7 +693,7 @@ parseInt("$99"); // returns NaN
 parseInt("99 cents"); // returns 99
 ```
 
-### parseFloat
+### `parseFloat`
 
 ```js
 /* Syntax: */

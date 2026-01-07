@@ -16,23 +16,22 @@
 
 - Most modern applications we interact with daily rely on hundreds of **decision-making** processes to function correctly.
 
+> [!info] MARK'S NOTE
+> Malaking parte ng coding ang conditions. Basta, importante sya...
+
 ## Comparison Operators
 
 - We use comparison operators to evaluate the relationship between two values, which is fundamental for **making decisions** in our programs.
 
 - A practical example of this is a website tracking how many free articles a user has read to see if they have reached their **monthly limit**.
 
-- Every comparison operation will always return a **Boolean value**, meaning the result is either `true` or `false`.
+- Every comparison operation will always return a **boolean value**, meaning the result is either `true` or `false`.
 
 - There are four primary relational operators:
     - `>` (**greater than**)
     - `<` (**less than**)
     - `>=` (**greater than or equal to**)
     - `<=` (**less than or equal to**)
-    - `==` **(equal to)**
-    - `!=` **(not equal to)**
-    - `===` **(strict equal to)**
-    - `!==` **(strict not equal to)**
 
 ```js
 /* Example: Basic Numeric Comparisons */
@@ -50,6 +49,9 @@
 
 "Hello!".length >= "Hello".length; // true
 ```
+
+> [!info] MARK'S NOTE
+> - Laging `true` or `false` ang resulta ng mga comparisons. Tulad sa tunay na buhay.
 
 ### String Comparisons
 
@@ -71,6 +73,9 @@
 '#' < '$'; // true (based on their specific Unicode order)
 ```
 
+> [!info] MARK'S NOTE
+> Although pwede ito sa strings (via unicode), there's no sense na gamitin ito sa relational operators. More sa numbers lang dapat. Ano ba iko-compare mo sa letters? Mas malaki ang "A" kaysa kay "a"? Palakihan ba ito ng titik?
+
 ## Double Equal (`==`)
 
 - The `==` operator is commonly known as the **equality operator**. It checks for the equality of values but **ignores the data type**.
@@ -81,7 +86,7 @@
 
 - This behavior often leads to **unexpected results** because JavaScript will try to force different types—like strings and numbers—to match.
 
-- We should note that **null** and **undefined** are considered equal when using `==`, despite being two distinct primitive values.
+- Note that **null** and **undefined** are considered equal when using `==`, despite being two distinct primitive values.
 
 ```js
 /* Example: Basic Equality with Same Types */
@@ -99,6 +104,10 @@ false == false; // true
 0 == false; // true (number vs boolean)
 null == undefined; // true (distinct primitives)
 ```
+
+> [!info] MARK'S NOTE
+> - **coercion** = "sapilitang pagpapalit"
+> - Sa modern dev, hindi na masyadong ginagamit ang double equals. Mas nagko-cause ito ng bug sa mga large projects.
 
 ## Triple Equals (`===`)
 
@@ -131,6 +140,11 @@ let isLoggedIn = 0;
 isLoggedIn == false; // true (this could be a bug)
 isLoggedIn === false; // false (this is more accurate)
 ```
+
+> [!info] MARK'S NOTE
+> - Mas strict pa sa nanay mo.
+> - Ginagamit ng almost lahat ng devs at codebases.
+> - Bukod sa value, kino-compare din nito ang type ng value.
 
 ## Non-equality Operators
 
@@ -250,10 +264,6 @@ console.error("This is a custom error message");
 
 - We can use operators like `===` (strict equality), `!==` (not equal), or `<` (less than) to create these conditions.
 
-- We can use **variables** to store data, such as a numeric `rating`, and then use an `if` statement to print specific feedback based on that value.
-
-- We can determine if a number is **odd** by using the **modulo operator** (`%`). By checking if `num % 2!== 0`, we can confirm the number has a remainder when divided by two.
-
 ```js
 /* Example: Simple Equality Check */
 
@@ -261,6 +271,8 @@ if (1 === 1) {
   console.log("It's true");
 }
 ```
+
+- We can use **variables** to store data, such as a numeric, and then use an `if` statement to print specific feedback based on that value.
 
 ```js
 /* Example: Performance Review Logic */
@@ -271,6 +283,8 @@ if (rating === 3) {
   console.log("YOU ARE A SUPERSTAR");
 }
 ```
+
+- We can determine if a number is **odd** by using the **modulo operator** (`%`). By checking if `num % 2!== 0`, we can confirm the number has a remainder when divided by two.
 
 ```js
 /* Example: Checking for Odd Numbers */
@@ -349,8 +363,6 @@ if (rating === 3) {
 
 - This structure is useful because it ensures that **one** of the code blocks will always run, providing consistent feedback to the user.
 
-- We can use this logic to handle high score systems, where we either update the record or notify the user that they did not beat the existing score.
-
 ```js
 /* Example: Using else as a fallback for invalid ratings */
 let rating = 5;
@@ -365,6 +377,8 @@ if (rating === 3) {
     console.log('invalid rating');
 }
 ```
+
+- We can use this logic to handle high score systems, where we either update the record or notify the user that they did not beat the existing score.
 
 ```js
 /* Example: Simple if/else for high score tracking */
@@ -389,11 +403,11 @@ if (userScore >= highScore) {
 
 - While there is no technical limit to nesting, it can make code **difficult to read** and understand if we have too many levels (e.g., five levels of nested `if` and `else` statements).
 
-- In many cases, we can replace nested logic with a **single conditional** that checks multiple requirements at once, which is a strategy we will explore next.
+- In many cases, we can replace nested logic with a **single conditional** that checks multiple requirements at once.
 
 ### Truthy and Falsy Values
 
-- Every value in JavaScript has an inherent **truthiness** or **falseness** associated with it, even if it is not a boolean.
+- Every value in JavaScript has an inherent **truthiness** or **falsiness** associated with it, even if it is not a boolean.
 
 - While there are only two actual boolean values, `true` and `false`, we can evaluate any variable in a **conditional** context to see if it is **truthy** or **falsy**.
 
@@ -407,8 +421,6 @@ if (userScore >= highScore) {
 
 - A common pattern is to check if a variable like `loggedInUser` or `username` has a value before running specific code.
 
-- This allows us to avoid writing complex comparisons; we simply check `if (variable)` to ensure it isn't `null`, `undefined`, or an empty string.
-
 ```js
 /* Example: Checking the truthiness of a number */
 let mystery = 5;
@@ -420,6 +432,8 @@ if (mystery) {
 }
 // This prints "truthy" because 5 is not 0.
 ```
+
+- This allows us to avoid writing complex comparisons; we simply check `if (variable)` to ensure it isn't `null`, `undefined`, or an empty string.
 
 ```js
 /* Example: Checking for a logged in user */
@@ -456,6 +470,9 @@ if (username) {
 - If **either side is false**, the entire expression becomes **false**. This applies whether it is the left side, the right side, or both that are false.
 
 - We use this when we have **multiple conditions** that must all be met simultaneously to execute a block of code.
+
+> [!info] MARK'S NOTE
+> - Kailangan ang parehong condition ay **true** para maging true ang buong statement.
 
 ### Combining Validations
 
@@ -499,7 +516,7 @@ if (num >= 1 && num <= 10) {
 
 ## Logical "OR" Operator (`||`)
 
-- The **OR operator** is represented by two **pipe characters** `||`, which are usually found above the return key on a keyboard.
+- The **OR operator** is represented by two **pipe characters** `||`.
 
 - Like the **AND operator**, it evaluates two sides (left and right), but it only requires **one side to be true** for the entire expression to be considered **true**.
 
@@ -511,9 +528,7 @@ if (num >= 1 && num <= 10) {
 
 - We use the **OR operator** to handle scenarios where multiple different criteria should trigger the same outcome.
 
-- A common example is a theater box office where different age groups (like children under 6 and seniors 65 or older) both receive the same discount or free entry.
-
-- By using `||`, we can check if a person meets **either** the youth criteria **or** the senior criteria in one expression.
+- A common example is a theater box office where different age groups (like children under 6 and seniors 65 or older) both receive the same discount or free entry. By using `||`, we can check if a person meets **either** the youth criteria **or** the senior criteria in one expression.
 
 ```js
 /* Example: Theater Ticket Pricing */
@@ -533,7 +548,7 @@ if (age < 6 || age >= 65) {
 
 - This is useful when we want to see if a variable matches any item in a specific set of options, such as checking if a color is one of several shades of purple.
 
-- While we can chain many `||` statements, we should keep in mind that JavaScript offers other tools like **arrays** and **built-in methods** to handle long lists of options more efficiently, which we will cover later.
+- While we can chain many `||` statements, we should keep in mind that JavaScript offers other tools like **arrays** and **built-in methods** to handle long lists of options more efficiently.
 
 ```js
 /* Example: Chaining Multiple OR Conditions */
@@ -634,15 +649,25 @@ let x = 7;
 x || x === 3 && x > 10; 
 ```
 
+> [!info] MARK'S NOTE
+> So parang ganito yan:
+>
+> Step 1: `true || false && true`
+> Step 2: `true || false` << logical "and", both conditions must be true.
+> Step 3: `true` << logical "or", either conditions is true.
+
 ### Precedence of Comparison Operators
 
 - **Comparison operators** (like `<` and `>`) have a higher precedence than **logical operators** (like `&&` and `||`).
 
 - This allows us to write complex logic like `x < 3 && x > 1` without using parentheses, because the engine evaluates the **comparisons** first and then applies the **logical operator** to the results.
 
+> [!info] MARK'S NOTE
+> Kino-convert muna ni JS engine ang mga comparison operations into booleans and then magpo-proceed sa logical operators.
+
 ### Using Parentheses for Clarity
 
-- **Parentheses** `()` have the **highest precedence** of all operators and will always "win" or run first.
+- **Parentheses** `()` have the **highest precedence** of all operators and will always run first.
 
 - We should use parentheses whenever we want to **override** the default order of operations or to make our logic **clearer** for other developers.
 
@@ -751,6 +776,11 @@ switch (emoji) {
     break;
 }
 ```
+
+> [!info] MARK'S NOTE
+> Para syang gumagamit nang logical operator but instead na "AND", "OR" ang gamit ni switch.
+>
+> `if (emoji === 'sad face' || emoji === 'happy face') {}`
 
 ## The Ternary Operator
 
