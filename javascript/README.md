@@ -1,5 +1,4 @@
 
-
 <div align="center">
 <div id="title">
 <a href="#"><img src="../__assets/images/logo.png" width="220" /></a>
