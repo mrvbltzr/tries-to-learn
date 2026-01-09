@@ -17,6 +17,7 @@
 - Most modern applications we interact with daily rely on hundreds of **decision-making** processes to function correctly.
 
 > [!info] MARK'S NOTE
+> 
 > Malaking parte ng coding ang conditions. Basta, importante sya...
 
 ## Comparison Operators
@@ -51,6 +52,7 @@
 ```
 
 > [!info] MARK'S NOTE
+>
 > - Laging `true` or `false` ang resulta ng mga comparisons. Tulad sa tunay na buhay.
 
 ### String Comparisons
@@ -74,6 +76,7 @@
 ```
 
 > [!info] MARK'S NOTE
+>
 > Although pwede ito sa strings (via unicode), there's no sense na gamitin ito sa relational operators. More sa numbers lang dapat. Ano ba iko-compare mo sa letters? Mas malaki ang "A" kaysa kay "a"? Palakihan ba ito ng titik?
 
 ## Double Equal (`==`)
@@ -84,7 +87,7 @@
 
 - If the values are the same after this conversion, the expression returns `true`. Otherwise, it returns `false`.
 
-- This behavior often leads to **unexpected results** because JavaScript will try to force different types—like strings and numbers—to match.
+- This behavior often leads to **unexpected results** because JavaScript will try to force different types, like strings and numbers, to match.
 
 - Note that **null** and **undefined** are considered equal when using `==`, despite being two distinct primitive values.
 
@@ -106,6 +109,7 @@ null == undefined; // true (distinct primitives)
 ```
 
 > [!info] MARK'S NOTE
+>
 > - **coercion** = "sapilitang pagpapalit"
 > - Sa modern dev, hindi na masyadong ginagamit ang double equals. Mas nagko-cause ito ng bug sa mga large projects.
 
@@ -142,6 +146,7 @@ isLoggedIn === false; // false (this is more accurate)
 ```
 
 > [!info] MARK'S NOTE
+>
 > - Mas strict pa sa nanay mo.
 > - Ginagamit ng almost lahat ng devs at codebases.
 > - Bukod sa value, kino-compare din nito ang type ng value.
@@ -472,7 +477,8 @@ if (username) {
 - We use this when we have **multiple conditions** that must all be met simultaneously to execute a block of code.
 
 > [!info] MARK'S NOTE
-> - Kailangan ang parehong condition ay **true** para maging true ang buong statement.
+> 
+> Kailangan ang parehong condition ay **true** para maging true ang buong statement.
 
 ### Combining Validations
 
@@ -650,11 +656,12 @@ x || x === 3 && x > 10;
 ```
 
 > [!info] MARK'S NOTE
+> 
 > So parang ganito yan:
 >
-> Step 1: `true || false && true`
-> Step 2: `true || false` << logical "and", both conditions must be true.
-> Step 3: `true` << logical "or", either conditions is true.
+> - Step 1: `true || false && true`
+> - Step 2: `true || false` << logical "and", both conditions must be true.
+> - Step 3: `true` << logical "or", either conditions is true.
 
 ### Precedence of Comparison Operators
 
@@ -663,6 +670,7 @@ x || x === 3 && x > 10;
 - This allows us to write complex logic like `x < 3 && x > 1` without using parentheses, because the engine evaluates the **comparisons** first and then applies the **logical operator** to the results.
 
 > [!info] MARK'S NOTE
+> 
 > Kino-convert muna ni JS engine ang mga comparison operations into booleans and then magpo-proceed sa logical operators.
 
 ### Using Parentheses for Clarity
@@ -685,7 +693,7 @@ let x = 7;
 (x || x === 3) && x > 10;
 ```
 
-## The Switch Statement
+## The `switch` Statement
 
 ```js
 /* Syntax: */
@@ -778,6 +786,7 @@ switch (emoji) {
 ```
 
 > [!info] MARK'S NOTE
+> 
 > Para syang gumagamit nang logical operator but instead na "AND", "OR" ang gamit ni switch.
 >
 > `if (emoji === 'sad face' || emoji === 'happy face') {}`

@@ -143,7 +143,9 @@ NaN + 5; // NaN
 ```
 
 > [!info] MARK'S NOTE
+>
 > - Ang `0` at `-0`, kapag ginamitan ng `==` o `===`, true pa rin ang lalabas dahil pareho itong zero.
+>
 > - Ang JavaScript ay gumagamit ng **IEEE 754** standard para sa mga floating-point numbers. Sa standard na ito, may isang bit na nakalaan para sa "sign" (0 para sa positive, 1 para sa negative). Dahil dito, teknikal na posible na magkaroon ng zero na may negative sign bit.
 
 ## Variables

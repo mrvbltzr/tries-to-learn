@@ -156,6 +156,7 @@ mySong[11]; // undefined
 ```
 
 > [!info] MARK'S NOTE
+>
 > Isipin na lang natin na para tayong nagbibilang ng letters sa string pero starting from 0.
 
 ### The `length` Property
@@ -198,6 +199,7 @@ console.log(faveSong); // "Surfin USA"
 ```
 
 > [!info] MARK'S NOTE
+>
 > **immutable** = hindi nababago
 
 ### String Methods
@@ -606,8 +608,9 @@ Math.floor(Math.random() * 6) + 1;
 ```
 
 > [!info] MARK'S NOTE
-> **inclusive** = kasama
-> **exclusive** = hindi kasama
+> 
+> - **inclusive** = kasama
+> - **exclusive** = hindi kasama
 >
 > Meaning, dahil inclusive ang `0`, kasama ito sa randomization, while hindi naman kasama ang `1`. Ang range lang ng randomization ay from `0` to `0.9999999999999999`. Hindi ito mag-ge-generate ng exact `1`.
 
