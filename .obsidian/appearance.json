@@ -1,7 +1,7 @@
 {
   "baseFontSize": 16,
   "cssTheme": "Nightfox",
-  "accentColor": "",
+  "accentColor": "#0a819e",
   "nativeMenus": true,
   "showViewHeader": true,
   "enabledCssSnippets": [

@@ -3,5 +3,8 @@
   "showIndentGuide": false,
   "useTab": false,
   "promptDelete": false,
-  "foldIndent": false
+  "foldIndent": false,
+  "strictLineBreaks": true,
+  "showLineNumber": true,
+  "showUnsupportedFiles": true
 }
