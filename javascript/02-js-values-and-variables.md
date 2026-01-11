@@ -50,7 +50,7 @@
 
 - We must be aware that JavaScript has **limitations with extreme precision**; because numbers are stored in memory, there is a maximum size and very long decimals may be cut off or approximated.
 
-#### Basic Mathematical Operations
+## Basic Mathematical Operations
 
 - We can use JavaScript as a **glorified calculator** to perform basic arithmetic using standard symbols.
 
@@ -72,7 +72,7 @@
 10 / 3; // 3.3333333333333335
 ```
 
-#### Modulo and Exponentiation
+## Modulo and Exponentiation
 
 - The **Modulo operator** `%` (also known as the remainder operator) divides the first number by the second and **returns the remainder**.
 
@@ -91,7 +91,7 @@
 5 ** 2; // 25 (5 squared)
 ```
 
-#### Order of Operations
+## Order of Operations
 
 - We follow the **standard mathematical order of operations (PEMDAS)**: Parentheses, Exponents, Multiplication, Division, Addition, and Subtraction.
 
@@ -106,7 +106,7 @@
 (3 - 9) * 2; // -12 (Parentheses happen first)
 ```
 
-#### NaN (Not a Number)
+## NaN (Not a Number)
 
 - We use a special value called `NaN`, which stands for **Not a Number**.
 
@@ -127,7 +127,7 @@
 NaN + 5; // NaN
 ```
 
-#### Infinity and -0
+## Infinity and -0
 
 - We can represent **Infinity** in JavaScript, which we can generate by dividing a number like one by zero.
 
@@ -145,7 +145,7 @@ NaN + 5; // NaN
 > [!info] MARK'S NOTE
 >
 > - Ang `0` at `-0`, kapag ginamitan ng `==` o `===`, true pa rin ang lalabas dahil pareho itong zero.
->
+> 
 > - Ang JavaScript ay gumagamit ng **IEEE 754** standard para sa mga floating-point numbers. Sa standard na ito, may isang bit na nakalaan para sa "sign" (0 para sa positive, 1 para sa negative). Dahil dito, teknikal na posible na magkaroon ng zero na may negative sign bit.
 
 ## Variables
