@@ -58,7 +58,9 @@ const fitbitData = [308000, 1814, 12.5];
 // text: 'great post'
 ```
 
-## Defining Objects with Literals
+## Defining and Formatting
+
+### Defining Objects with Literals
 
 - We use **curly braces** `{}` to define a new object. This specific syntax is technically known as an **object literal**.
 
@@ -82,48 +84,7 @@ const fitbitData = {
 };
 ```
 
-## Accessing Data Using Dot Syntax
-
-- We can retrieve information from an object using the **dot syntax**, which involves typing the object name followed by a period and the key name.
-
-- We have used similar syntax before, such as when we check a string's length using `.length`.
-
-- While dot syntax is the standard way to access properties, it is different from executing a method because we do not use parentheses unless we are calling a function stored within the object.
-
-```js
-/* Example: Accessing Object Properties */
-
-const fitbitData = {
-    totalMiles: 211.7,
-    avgCalorieBurn: 5755
-};
-
-// Accessing the totalMiles property
-fitbitData.totalMiles; // Returns 211.7
-
-// Accessing the avgCalorieBurn property
-fitbitData.avgCalorieBurn; // Returns 5755
-```
-
-## Object Keys and Data Types
-
-- We can use any data type as a **value** in an object, including numbers, strings, booleans, arrays, and even other objects.
-
-- **Keys** are handled differently; JavaScript automatically converts keys into **strings**.
-
-- Even if we use a number as a key, it is stored as a string behind the scenes. However, we cannot always use dot syntax to access keys that are numbers (e.g., `object.45` will cause an error). The only exception to the "keys are strings" rule is a data type called a **symbol**, though these are less commonly used.
-
-```js
-/* Example: Numeric Keys are Converted to Strings */
-
-const data = {
-    45: "forty-five"
-};
-
-// Behind the scenes, 45 is treated as "45"
-```
-
-## Formatting and Commas
+### Formatting and Commas
 
 - **Commas** are mandatory between properties in an object so JavaScript knows where one property ends and the next begins.
 
@@ -146,7 +107,25 @@ const stuff = {
 };
 ```
 
-## Automatic String Conversion of Keys
+### Object Keys and Data Types
+
+- We can use any data type as a **value** in an object, including numbers, strings, booleans, arrays, and even other objects.
+
+- **Keys** are handled differently; JavaScript automatically converts keys into **strings**.
+
+- Even if we use a number as a key, it is stored as a string behind the scenes. However, we cannot always use dot syntax to access keys that are numbers (e.g., `object` will cause an error). The only exception to the "keys are strings" rule is a data type called a **symbol**, though these are less commonly used.
+
+```js
+/* Example: Numeric Keys are Converted to Strings */
+
+const data = {
+    45: "forty-five"
+};
+
+// Behind the scenes, 45 is treated as "45"
+```
+
+### Automatic String Conversion of Keys
 
 - Even if we attempt to use a **number** or a **boolean** as a key, JavaScript will automatically convert it into a **string**.
 
@@ -154,7 +133,32 @@ const stuff = {
 
 - We can verify this by accessing a property using both the number and the string version of that number; they will yield the same result.
 
-## Accessing Properties with Square Brackets
+## Accessing Data
+
+### Using Dot Syntax
+
+- We can retrieve information from an object using the **dot syntax**, which involves typing the object name followed by a period and the key name.
+
+- We have used similar syntax before, such as when we check a string's length using `.length`.
+
+- While dot syntax is the standard way to access properties, it is different from executing a method because we do not use parentheses unless we are calling a function stored within the object.
+
+```js
+/* Example: Accessing Object Properties */
+
+const fitbitData = {
+    totalMiles: 211.7,
+    avgCalorieBurn: 5755
+};
+
+// Accessing the totalMiles property
+fitbitData.totalMiles; // Returns 211.7
+
+// Accessing the avgCalorieBurn property
+fitbitData.avgCalorieBurn; // Returns 5755
+```
+
+### Using Square Brackets
 
 - We cannot use **dot notation** to access keys that are numbers. For example, `numbers.100` will result in a **syntax error**.
 
@@ -175,7 +179,7 @@ console.log(numbers[100]); // 'one hundred'
 console.log(numbers['100']); // 'one hundred'
 ```
 
-## Handling Invalid Identifiers
+### Handling Invalid Identifiers
 
 - In JavaScript, an **identifier** is a name used for variables. There are rules for what makes an identifier valid; for instance, they cannot start with a number or contain spaces.
 
@@ -195,7 +199,7 @@ const occupations = {
 console.log(occupations['76 trombones']); // 'great song'
 ```
 
-## Dynamic Data Access
+### Dynamic Data Access
 
 - A major advantage of **square bracket notation** is that it allows us to use **dynamic values**, such as variables, to access data.
 
@@ -228,7 +232,9 @@ console.log(palette[mysteryColor]); // '#f9ca24'
 console.log(palette['bl' + 'ue']); // '#30336b'
 ```
 
-## Adding and Updating Properties
+## Manipulating Objects
+
+### Adding and Updating Properties
 
 - We use **dot notation** or **square brackets** to add new properties or update existing ones within an object.
 
@@ -253,10 +259,10 @@ userReviews.MrSmith78 = 3.5;
 userReviews['Colt'] = 5;
 
 // Updating a property value
-userReviews['Colt'] = 5; 
+userReviews['Colt'] = 15;
 ```
 
-## Modifying Values with Operators
+### Modifying Values with Operators
 
 - We can use shorthand operators like `+=` (**addition assignment**) or `++` (**increment**) to update numerical values stored in properties.
 
@@ -272,7 +278,9 @@ userReviews['Queen b 49'] += 2;
 userReviews.MrSmith78++;
 ```
 
-## Nesting Objects and Arrays
+## Data Structuring
+
+### Nesting Objects and Arrays
 
 - We can nest arrays inside of objects and objects inside of arrays to model complex data.
 
@@ -293,7 +301,7 @@ const student = {
 };
 ```
 
-## Accessing Nested Data
+### Accessing Nested Data
 
 - To access properties within nested objects, we use **chaining** with **dot notation**.
 
@@ -303,6 +311,17 @@ const student = {
 
 ```js
 /* Example: Accessing and Calculating Nested Values */
+
+const student = {
+    firstName: 'David',
+    lastName: 'Jones',
+    strengths: ['Music', 'Art'],
+    exams: {
+        midterm: 92,
+        final: 88
+    }
+};
+
 // Calculating an average from nested object properties
 const average = (student.exams.midterm + student.exams.final) / 2;
 
@@ -310,7 +329,7 @@ const average = (student.exams.midterm + student.exams.final) / 2;
 const favoriteArt = student.strengths[1];
 ```
 
-## Arrays of Objects
+### Arrays of Objects
 
 - A highly common pattern in JavaScript is an **array of objects**.
 
@@ -325,7 +344,7 @@ const shoppingCart = [
 ];
 ```
 
-## Complex Data Modeling
+### Complex Data Modeling
 
 - We can use deep nesting to represent entire application states, such as a **tic-tac-toe game**.
 
@@ -354,7 +373,7 @@ const game = {
 
 ## Equality and Reference Types
 
-- When we use equality operators like `===` or `==` with **primitive types**, they compare values. However, with **reference types** (arrays and objects), JavaScript compares the **reference** in memory, not the contents.
+- When we use equality operators like `===` or `==` with **primitive types**, they compare values. However, with **reference types** (arrays and objects), JavaScript compares the **reference** in memory, not the contents. (See also: [Reference Type](05-capture-collections-of-data-with-arrays.md#Reference%20Type))
 
 - Variables for arrays do not store the actual elements; instead, they store a **memory address** (a reference) pointing to where the data is kept.
 
@@ -369,7 +388,9 @@ let mystery = [1, 2, 3];
 
 // Returns false because they have different references in memory
 console.log(nums === mystery); 
+```
 
+```js
 /* Example: Comparing References */
 let moreNums = nums;
 
@@ -381,7 +402,7 @@ moreNums.push(4);
 console.log(nums); // [1, 2, 3, 4]
 ```
 
-## Checking for Array Content and Length
+### Checking for Array Content and Length
 
 - We cannot check if an array is empty by comparing it to `[]` (e.g., `if (arr === [])`) because a new empty array literal creates a **new memory reference**, making the comparison always `false`.
 
