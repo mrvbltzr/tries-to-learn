@@ -35,9 +35,9 @@
     "useInternalPlugins": false
   },
   "README.md": "TiInfoCircle",
-  "__assets": "TiAsset",
-  "__assets/userscripts": "TiBrandJavascript",
-  "__assets/templates": "TiTemplate",
-  "__assets/images": "TiPhotoCode",
-  "javascript": "TiBrandJavascript"
+  "javascript": "TiBrandJavascript",
+  "_assets": "TiAsset",
+  "_assets/userscripts": "TiBrandJavascript",
+  "_assets/templates": "TiTemplate",
+  "_assets/images": "TiPhotoCode"
 }

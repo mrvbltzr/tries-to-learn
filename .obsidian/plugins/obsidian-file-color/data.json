@@ -25,10 +25,6 @@
   ],
   "fileColors": [
     {
-      "path": "_assets",
-      "color": "7AQyukgqwCzKkHJzP4-S2"
-    },
-    {
       "path": "README.md",
       "color": "28pFStFq0Gdxx1kCoALCG"
     },
@@ -37,7 +33,7 @@
       "color": "JeJgzTAJe9scOFG_4RUCz"
     },
     {
-      "path": "__assets",
+      "path": "_assets",
       "color": "7AQyukgqwCzKkHJzP4-S2"
     }
   ]
