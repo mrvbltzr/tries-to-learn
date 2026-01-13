@@ -39,10 +39,10 @@ export const TableSnippetRowLabel = (label) => {
                                 tagName: 'div',
                                 className: 'icon-code inline',
                             }),
-                            prefix && LabelBadge(prefix.at(1)),
+                            prefix && LabelBadge(prefix.at(1).trim()),
                             el({
                                 tagName: 'span',
-                                textContent: prefix ? prefix.at(2) : label,
+                                textContent: (prefix ? prefix.at(2) : label).trim(),
                             }),
                         ],
                     }),
