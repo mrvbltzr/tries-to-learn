@@ -1,33 +1,45 @@
 
 <div align="center">
-<a href="#"><img src="_assets/images/logo.png" width="220" /></a>
+<a href="#"><img src="_assets/images/logo.png" width="280" /></a>
 <br /><br />
 <div id="message">
-<p>Greetings, fellow carbon-based lifeforms!</p>
+<p><strong>Greetings, fellow carbon-based lifeforms!</strong></p>
 <p>I'm <strong>Mark</strong>, and I want to increase my knowledge about programming languages, coding principles, and other stuff.</p>
 <p>This repository is an archive (or a dump) of my learning journey, documenting my progress through notes, hands-on exercises, and practice projects. Basically, it contains all the evidence of my struggles and triumphs <em>(mostly struggles, let's be real)</em>.</p>
 </div>
-</div>
-
-<div align="center">
-<br /><br />
-<h2>✒️ I take notes... seriously!</h2>
-<a href="#"><img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExY3VtbWJqb3czMmowdzlyeTBuYzd4a2YxdjN4Z2IyaWl5dWYwMGFuNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/jIZWWPYj2HfEI/giphy.gif" width="130" /></a>
 <br />
+<table>
+<thead>
+<tr>
+<th><center>Course</center></th>
+<th><center>Notes</center></th>
+<th><center>Playground</center></th>
+<th><center>Status</center></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.udemy.com/course/javascript-beginners-complete-tutorial/">The Modern JavaScript Bootcamp Course</a></td>
+<td align="center"><a href="./javascript">View</a></td>
+<td align="center"><a href="https://mrvbltzr.github.io/tries-to-learn/javascript/" target="_blank">Launch</a></td>
+<td align="center">🏗️ In Progress</td>
+</tr>
+</tbody>
+</table>
 </div>
 
-My notes are written using [Obsidian](https://obsidian.md/) and are best viewed within that application. I want to apologize in advance if you find any grammatical errors in my notes, as English is not my first language and is currently a work in progress.
+<div align="center">
+<br />
+<a href="#"><img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExY3VtbWJqb3czMmowdzlyeTBuYzd4a2YxdjN4Z2IyaWl5dWYwMGFuNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/jIZWWPYj2HfEI/giphy.gif" width="120" /></a>
+<br /><br />
+<p>My notes are written using <a href="https://obsidian.md/" rel="nofollow">Obsidian</a> and are best viewed within that application.</p>
+</div>
 
 <div align="center">
-<br /><br />
-<h2>🔌 Plug it in!</h2>
-<div>
 <a href="#"><img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDN3eTFjbzYwemtyNzZ3a2NmbDN2NTVqZTJnN3J5NXRxOHd0b3g1bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/82V7aEFGb2fU0ohIGt/giphy.gif" width="160" /></a>
+<br /><br />
+<p>Plugins? Already here! No need to bother your little fingers with manual installation.</p>
 </div>
-<br />
-</div>
-
-Plugins? Already here! No need to bother your little fingers with manual installation.
 
 | <center>Plugin Name</center>                                                       | <center>Description</center>                                                                  | <center>My Use Case</center>                                                                                                                                    |
 | ---------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |

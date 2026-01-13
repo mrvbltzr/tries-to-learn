@@ -8,14 +8,13 @@
 <a href="https://www.udemy.com/course/javascript-beginners-complete-tutorial/">
 <img src="https://img.shields.io/badge/The_Modern_JavaScript_Bootcamp_Course-white?logo=udemy&style=for-the-badge&color=D2CBCB" alt="The Modern JavaScript Bootcamp Course" />
 </a>
+<br /><br />
 </div>
 <p>This repo section is my <strong>JavaScript</strong> learning journey.</p>
 <p>Expect notes and projects that prove I'm trying. <strong>...really, really trying.</strong></p>
 <br />
 </div>
 </div>
-
-> The notes were written in [Obsidian](https://obsidian.md/) and are best viewed there.
 
 ## 🧙🏼‍♂️ I'm not a JavaScript wizard (yet)
 
