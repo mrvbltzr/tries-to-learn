@@ -1,7 +1,7 @@
 
 <div align="center">
 <div id="title">
-<a href="#"><img src="../__assets/images/logo.png" width="220" /></a>
+<a href="#"><img src="../_assets/images/logo.png" width="220" /></a>
 <br /><br />
 <div>
 <a href="#"><img src="https://img.shields.io/badge/javascript-ffca28?style=for-the-badge&label=Mark%20Tries%20To%20Learn" alt="Mark Tries To Learn" /></a>
