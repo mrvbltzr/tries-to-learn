@@ -1,24 +1,31 @@
 /** @type {Record<string, { default: import('@/types').ExampleCollection }>} */
-const allFiles = import.meta.glob('@/data/**/!(index.js)', { eager: true });
+const allFiles = import.meta.glob('@/data/{section-*,challenges}/**/*.js', { eager: true });
 
 /** @type {Record<string, import('@/types').ExampleCollection[]>} */
 const mappedSections = Object.entries(allFiles).reduce((acc, [path, module]) => {
     const pathParts = path.split('/');
-    const section = pathParts.find((part) => part.startsWith('section-'));
+    const label = pathParts.find((part) => part.startsWith('section-') || part.startsWith('challenges'));
 
-    if (section) {
-        if (!acc[section]) {
-            acc[section] = [];
-        }
-
-        acc[section].push(module.default);
+    if (!label) {
+        return acc;
     }
+
+    if (!acc[label]) {
+        acc[label] = [];
+    }
+
+    acc[label].push(module.default);
 
     return acc;
 }, {});
 
 /** @type {import('@/types').Data[]} */
 export const sections = [
+    {
+        section: 0,
+        title: 'Challenges',
+        examples: mappedSections['challenges'],
+    },
     {
         section: 2,
         title: 'JS Values and Variables',
@@ -48,5 +55,10 @@ export const sections = [
         section: 7,
         title: 'The World of Loop',
         examples: mappedSections['section-07'],
+    },
+    {
+        section: 8,
+        title: 'Writing Reusable Code With Functions',
+        examples: mappedSections['section-08'],
     },
 ];
