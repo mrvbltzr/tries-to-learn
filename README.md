@@ -1,6 +1,6 @@
 
 <div align="center">
-<a href="#"><img src="__assets/images/logo.png" width="220" /></a>
+<a href="#"><img src="_assets/images/logo.png" width="220" /></a>
 <br /><br />
 <div id="message">
 <p>Greetings, fellow carbon-based lifeforms!</p>
