@@ -12,7 +12,7 @@ export const Logo = (title) => {
         children: [
             el({
                 tagName: 'a',
-                href: '#',
+                href: '.',
                 className: 'my-4',
                 children: [
                     el({
@@ -27,7 +27,7 @@ export const Logo = (title) => {
             el({
                 tagName: 'h1',
                 className: 'text-slate-200 text-2xl',
-                textContent: title ?? 'Hello world!',
+                textContent: title,
             }),
         ],
     });

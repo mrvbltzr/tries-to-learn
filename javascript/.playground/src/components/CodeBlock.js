@@ -16,6 +16,9 @@ export const CodeBlock = (snippet) => {
     return el({
         tagName: 'div',
         className: `flex-1 border-2 border-dashed border-slate-700 bg-slate-900 rounded-xl p-4`,
+        tap: (el) => {
+            el.setAttribute('data-aos', 'fade-right');
+        },
         children: [
             el({
                 tagName: 'pre',

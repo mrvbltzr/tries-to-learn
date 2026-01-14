@@ -14,3 +14,4 @@ declare module '*.svg' {
 }
 
 declare let hljs: any;
+declare let AOS: any;

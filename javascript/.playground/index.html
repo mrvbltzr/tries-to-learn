@@ -5,15 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mark Tries to Learn: JavaScript</title>
     <link rel="icon" type="image/svg+xml" href="/mttl.svg" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/night-owl.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/lucide-static@latest/font/lucide.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/highlight.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
+    />
+    <style>
+      html {
+        --default-font-family: 'Google Sans';
+        --default-mono-font-family: 'Fira Mono';
+        font-size: 0.8em;
+      }
+    </style>
   </head>
   <body class="bg-slate-950">
     <div class="flex flex-col relative overflow-hidden">
+      <div class="flex justify-center items-center gap-4 bg-slate-900">
+        <a href="?page=snippets" class="p-4 text-white bg-slate-700" title="Go to Snippets page">Snippets</a>
+        <a href="?page=challenges" class="p-4 text-white bg-slate-700" title="Go to Challenges page">Challenges</a>
+      </div>
       <div id="logo" class="w-full hidden md:block px-24 my-3"></div>
-      <div id="navigation" class="px-6 md:px-24 p-4 bg-slate-900"></div>
+      <div id="navigation"></div>
       <div id="app" class="flex flex-col gap-10 flex-[3] my-7 mx-6 md:mx-24 overflow-hidden"></div>
     </div>
-    <script type="module" src="/src/app.js"></script>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>

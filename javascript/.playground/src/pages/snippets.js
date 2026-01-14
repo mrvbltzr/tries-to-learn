@@ -1,5 +1,4 @@
-import '@/assets/style.css';
-
+/* global AOS */
 import { sections } from '@/data';
 
 import { HorizontalRule } from '@/components/HorizontalRule';
@@ -11,16 +10,14 @@ import { TableSnippetRow } from '@/components/TableSnippetRow';
 import { TableSnippetRowLabel } from '@/components/TableSnippetRowLabel';
 import { TableTitle } from '@/components/TableTitle';
 
-(() => {
-    const logoEl = document.getElementById('logo');
-    const navEl = document.getElementById('navigation');
-    const appEl = document.getElementById('app');
-
-    if (!navEl || !appEl) {
-        throw new Error("Necessary elements with ids 'navigation' and 'app' not found.");
-    }
-
-    const sectionNumber = parseInt(new URLSearchParams(window.location.search).get('section'));
+/**
+ * @param {HTMLElement} logoEl
+ * @param {HTMLElement} navEl
+ * @param {HTMLElement} appEl
+ * @param {URLSearchParams} params
+ */
+export function snippetsPage(logoEl, navEl, appEl, params) {
+    const sectionNumber = parseInt(params.get('section'));
     const section = sections.find((s) => s.section === sectionNumber);
 
     const content = !section
@@ -35,7 +32,9 @@ import { TableTitle } from '@/components/TableTitle';
               return [Table([TableTitle(name), ...snippetRows]), HorizontalRule()];
           });
 
-    logoEl.appendChild(Logo(section?.title));
+    logoEl.appendChild(Logo(section?.title ?? 'Snippets'));
     navEl.appendChild(Navigation(sections, sectionNumber));
     appEl.append(...content);
-})();
+
+    AOS.init({ once: true });
+}

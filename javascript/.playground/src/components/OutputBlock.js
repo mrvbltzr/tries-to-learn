@@ -60,12 +60,19 @@ export const OutputBlock = (callback) => {
         return el({
             tagName: 'div',
             className,
+            tap: (el) => {
+                el.setAttribute('data-aos', 'fade-left');
+            },
             children: _cache,
         });
     } catch (error) {
         return el({
             tagName: 'div',
             className,
+            tap: (el) => {
+                el.setAttribute('data-aos', 'fade-left');
+                el.setAttribute('data-aos-offset', '400');
+            },
             children: [Content(error)],
         });
     }

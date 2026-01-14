@@ -6,6 +6,10 @@ const IconBlock = () => {
     return el({
         tagName: 'div',
         className: `flex flex-none items-center text-slate-200 text-center`,
+        tap: (el) => {
+            el.setAttribute('data-aos', 'zoom-in');
+            el.setAttribute('data-aos-offset', '400');
+        },
         children: [
             el({
                 tagName: 'i',
