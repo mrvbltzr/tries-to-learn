@@ -21,21 +21,6 @@ export default defineConfig([
         rules: {
             'no-unused-vars': 'warn',
             'curly': ['error', 'all'],
-            'object-curly-newline': [
-                'warn',
-                {
-                    ImportDeclaration: 'never',
-                    ExportDeclaration: {
-                        multiline: true,
-                        minProperties: 2,
-                    },
-                    ObjectPattern: { consistent: true },
-                    ObjectExpression: {
-                        multiline: true,
-                        minProperties: 2,
-                    },
-                },
-            ],
         },
     },
 
