@@ -7,6 +7,7 @@
  * @typedef {Partial<Omit<HTMLElementTagNameMap[K], 'style' | 'children'>> & {
  * tagName: K,
  * styles?: import('csstype').Properties,
+ * tap?: (el: HTMLElementTagNameMap[K]) => void,
  * children?: ChildElement[]
  * }} ElementOptions
  */
@@ -19,7 +20,7 @@
  * @returns {HTMLElementTagNameMap[K]} The constructed HTMLElement.
  */
 export const el = (options) => {
-    const { tagName, styles, children = [], ...rest } = options;
+    const { tagName, styles, tap, children = [], ...rest } = options;
 
     const element = document.createElement(tagName);
 
@@ -27,6 +28,10 @@ export const el = (options) => {
 
     if (styles) {
         Object.assign(element.style, styles);
+    }
+
+    if (tap) {
+        tap(element);
     }
 
     children.forEach((child) => {

@@ -1,5 +1,7 @@
+import challengesResults from '@/data/challenges';
+
 /** @type {Record<string, { default: import('@/types').ExampleCollection }>} */
-const allFiles = import.meta.glob('@/data/{section-*,challenges}/**/*.js', { eager: true });
+const allFiles = import.meta.glob('@/data/section-*/**/*.js', { eager: true });
 
 /** @type {Record<string, import('@/types').ExampleCollection[]>} */
 const mappedSections = Object.entries(allFiles).reduce((acc, [path, module]) => {
@@ -21,11 +23,6 @@ const mappedSections = Object.entries(allFiles).reduce((acc, [path, module]) => 
 
 /** @type {import('@/types').Data[]} */
 export const sections = [
-    {
-        section: 0,
-        title: 'Challenges',
-        examples: mappedSections['challenges'],
-    },
     {
         section: 2,
         title: 'JS Values and Variables',
@@ -62,3 +59,9 @@ export const sections = [
         examples: mappedSections['section-08'],
     },
 ];
+
+export const challenges = {
+    section: 0,
+    title: 'Challenges',
+    examples: challengesResults,
+};
