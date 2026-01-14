@@ -6,7 +6,7 @@ export default defineConfig({
     base: '/tries-to-learn/javascript/',
     resolve: {
         alias: {
-            '@': path.resolve('./src'),
+            '@': path.resolve(__dirname, './src'),
         },
     },
     build: {

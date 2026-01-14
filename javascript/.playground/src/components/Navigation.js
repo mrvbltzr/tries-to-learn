@@ -11,7 +11,7 @@ export const Navigation = (data, section) => {
 
         return el({
             tagName: 'a',
-            href: `?section=${value.section}`,
+            href: `?page=snippets&section=${value.section}`,
             title: `Go to "${value.title}" section`,
             textContent: `[#${value.section}] ${value.title}`,
             className: `flex items-center justify-center py-2 px-4 rounded-xl font-bold text-center border border-slate-${borderIntensity} text-slate-300 bg-slate-${bgintensity}`,
@@ -20,7 +20,13 @@ export const Navigation = (data, section) => {
 
     return el({
         tagName: 'div',
-        className: 'flex flex-col sm:flex-row gap-5 lg:gap-3 text-sm',
-        children: links,
+        className: 'px-6 md:px-24 py-4 bg-slate-900',
+        children: [
+            el({
+                tagName: 'div',
+                className: 'flex flex-col justify-between sm:flex-row gap-5 lg:gap-3 text-sm',
+                children: links,
+            }),
+        ],
     });
 };
