@@ -1,2 +1,10 @@
 * text=auto eol=lf
+
+*.js diff=js
+*.css diff=css
+*.html diff=html
+*.md diff=markdown
+
 /.github export-ignore
+.styleci.yml export-ignore
+CHANGELOG.md export-ignore
