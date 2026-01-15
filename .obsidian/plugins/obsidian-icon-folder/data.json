@@ -5,13 +5,7 @@
     "fontSize": 16,
     "emojiStyle": "native",
     "iconColor": null,
-    "recentlyUsedIcons": [
-      "TiPhotoCode",
-      "TiTemplate",
-      "TiBrandJavascript",
-      "TiAsset",
-      "TiFolders"
-    ],
+    "recentlyUsedIcons": [],
     "recentlyUsedIconsSize": 5,
     "rules": [],
     "extraMargin": {
@@ -35,9 +29,10 @@
     "useInternalPlugins": false
   },
   "README.md": "TiInfoCircle",
-  "javascript": "TiBrandJavascript",
   "_assets": "TiAsset",
   "_assets/userscripts": "TiBrandJavascript",
   "_assets/templates": "TiTemplate",
-  "_assets/images": "TiPhotoCode"
+  "_assets/images": "TiPhotoCode",
+  "javascript": "TiBrandJavascript",
+  "javascript/README.md": "TiInfoCircle"
 }

@@ -2,5 +2,5 @@
   "openExternalURLs": true,
   "enableAdblocking": true,
   "searchEngine": "google",
-  "markdownPath": "__assets/webviewer"
+  "markdownPath": "_assets/webviewer"
 }

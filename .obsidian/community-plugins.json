@@ -1,10 +1,12 @@
 [
-  "obsidian-editor-shortcuts",
+  "advanced-exclude",
   "code-styler",
   "editing-toolbar",
-  "obsidian-file-color",
   "file-explorer-note-count",
+  "obsidian-editor-shortcuts",
+  "obsidian-file-color",
   "obsidian-icon-folder",
   "obsidian-linter",
+  "obsidian42-brat",
   "templater-obsidian"
 ]
