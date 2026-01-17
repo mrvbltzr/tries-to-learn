@@ -1,4 +1,5 @@
 // @ts-nocheck
+
 /** @type {import('@/types').SnippetCollection} */
 export default {
     name: 'Accessing Data',
@@ -34,6 +35,7 @@ console.log(fitbitData.avgCalorieBurn); // Returns 5755`,
                     16: 'sixteen',
                 };
 
+                console.log(() => eval('numbers.100')); // Intentional to show SyntaxError
                 console.log(numbers[100]); // 'one hundred'
                 console.log(numbers['100']); // 'one hundred'
             },
@@ -43,7 +45,7 @@ const numbers = {
     16: 'sixteen'
 };
 
-// console.log(numbers.100); // Error: Unexpected number
+console.log(numbers.100); // Error: Unexpected number
 console.log(numbers[100]); // 'one hundred'
 console.log(numbers['100']); // 'one hundred'`,
         },
@@ -55,8 +57,8 @@ console.log(numbers['100']); // 'one hundred'`,
                     'favorite food': 'pizza',
                 };
 
-                // console.log(occupations.76 trombones); // Syntax Error
-                console.log(occupations['76 trombones']); // 'great song'
+                console.log(() => eval('occupations.76 trombones')); // Intentional to show SyntaxError
+                console.log(occupations['76 trombones']);
             },
             snippet: `
 const occupations = {
@@ -64,7 +66,7 @@ const occupations = {
     'favorite food': 'pizza'
 };
 
-// console.log(occupations.76 trombones); // Syntax Error
+console.log(occupations.76 trombones); // SyntaxError
 console.log(occupations['76 trombones']); // 'great song'`,
         },
         {
