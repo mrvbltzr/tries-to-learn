@@ -14,6 +14,25 @@ export default defineConfig({
     build: {
         minify: 'terser',
         rollupOptions: {
+            output: {
+                manualChunks: (id) => {
+                    if (!id.endsWith('.js')) {
+                        return;
+                    }
+
+                    if (id.includes('node_modules')) {
+                        return 'vendor';
+                    }
+
+                    if (id.includes('src/data')) {
+                        return 'data';
+                    }
+
+                    if (id.includes('src/components')) {
+                        return 'components';
+                    }
+                },
+            },
             onwarn: function (warning, warn) {
                 if (warning.code === 'EVAL' || warning.message.includes('reassign a variable')) {
                     return;
