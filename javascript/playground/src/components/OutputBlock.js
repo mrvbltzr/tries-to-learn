@@ -38,18 +38,34 @@ const ResultContainer = (result, type) => {
 };
 
 /**
- * @param {any | Error} result
+ * @param {any | Function | Error} logic
  */
-const Content = (result) => {
-    if (result instanceof Error) {
-        return ResultContainer(String(result), result.name);
+const Content = (logic) => {
+    const [data, error] = (() => {
+        if (logic instanceof Error) {
+            return [null, logic];
+        }
+
+        if (typeof logic !== 'function') {
+            return [logic, null];
+        }
+
+        try {
+            return [logic(), null];
+        } catch (e) {
+            return [null, e];
+        }
+    })();
+
+    if (error instanceof Error) {
+        return ResultContainer(String(error), error.name);
     }
 
-    if (typeof result === 'object') {
-        return ResultContainer(stringify(result), Array.isArray(result) ? 'array' : 'object');
+    if (typeof data === 'object') {
+        return ResultContainer(stringify(data), Array.isArray(data) ? 'array' : 'object');
     }
 
-    return ResultContainer(String(result), typeof result);
+    return ResultContainer(String(data), typeof data);
 };
 
 /**
