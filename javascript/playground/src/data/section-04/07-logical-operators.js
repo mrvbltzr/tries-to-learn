@@ -1,4 +1,5 @@
 // @ts-nocheck
+
 /** @type {import('@/types').SnippetCollection} */
 export default {
     name: 'Logical Operators',

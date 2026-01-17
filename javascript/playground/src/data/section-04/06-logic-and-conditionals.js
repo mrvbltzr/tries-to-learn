@@ -1,3 +1,6 @@
+// @ts-nocheck
+/* eslint-disable */
+
 /** @type {import('@/types').SnippetCollection} */
 export default {
     name: 'Logic and Conditionals',
