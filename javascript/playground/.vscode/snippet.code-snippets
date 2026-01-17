@@ -1,0 +1,38 @@
+{
+    "Data Snippet": {
+        "scope": "javascript",
+        "prefix": "data",
+        "description": "Generate a data template",
+        "body": [
+            "/**",
+            " * @type {import('@/types').SnippetCollection}",
+            " */",
+            "export default {",
+            "    name: '${TM_FILENAME_BASE/([a-z]+)(?:[\\-_]([a-z]+))?/${1:/capitalize}${2:+ }${2:/capitalize}/g}',",
+            "    snippets: [",
+            "        {",
+            "            label: '$0',",
+            "            output: (console) => {",
+            "                $1",
+            "            },",
+            "            snippet: `$2`,",
+            "        },",
+            "    ],",
+            "};"
+        ],
+    },
+    "Example Snippet": {
+        "scope": "javascript",
+        "prefix": "snippet",
+        "description": "Generate a data snippet template",
+        "body": [
+            "{",
+            "    label: '$0',",
+            "    output: (console) => {",
+            "        $1",
+            "    },",
+            "    snippet: `$2`,",
+            "},",
+        ],
+    }
+}
