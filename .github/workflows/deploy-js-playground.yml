@@ -1,0 +1,47 @@
+name: Deploy JavaScript Playground
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'javascript/playground/**'
+
+env:
+  ROOT_PATH: javascript/playground
+
+permissions:
+  contents: write
+
+defaults:
+  run:
+    working-directory: ${{ env.ROOT_PATH }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 23
+          cache: 'npm'
+          cache-dependency-path: ${{ env.ROOT_PATH }}/package-lock.json
+
+      - name: Install Build Dependencies
+        run: npm ci --omit=dev
+
+      - name: Run 'build' command
+        run: npm run build
+
+      - name: Deploy to GH Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: ${{ env.ROOT_PATH }}/dist
+          target-folder: javascript
+          branch: gh-pages
+          clean: false
