@@ -1,17 +1,19 @@
 // @ts-nocheck
+/* eslint-disable */
+
 /** @type {import('@/types').SnippetCollection} */
 export default {
     name: 'Triple Equals',
     snippets: [
         {
             label: 'Strict vs. Loose Equality',
-            output: (output) => {
-                output.log(2 == '2');
-                output.log(2 === '2');
-                output.log(0 == false);
-                output.log(0 === false);
-                output.log(undefined == null);
-                output.log(undefined === null);
+            output: (console) => {
+                console.log(2 == '2');
+                console.log(2 === '2');
+                console.log(0 == false);
+                console.log(0 === false);
+                console.log(undefined == null);
+                console.log(undefined === null);
             },
             snippet: `
 console.log(2 == '2'); // true (value is the same, type is ignored)
@@ -26,10 +28,10 @@ console.log(undefined === null); // false
         },
         {
             label: 'Checking Login Status',
-            output: (output) => {
+            output: (console) => {
                 let isLoggedIn = 0;
-                output.log(isLoggedIn == false);
-                output.log(isLoggedIn === false);
+                console.log(isLoggedIn == false);
+                console.log(isLoggedIn === false);
             },
             snippet: `
 let isLoggedIn = 0;

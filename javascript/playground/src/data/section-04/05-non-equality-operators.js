@@ -1,13 +1,14 @@
 // @ts-nocheck
+
 /** @type {import('@/types').SnippetCollection} */
 export default {
     name: 'Non Equality-Operators',
     snippets: [
         {
             label: 'Non-equality Comparisons',
-            output: (output) => {
-                output.log(1 != '1');
-                output.log(1 !== '1');
+            output: (console) => {
+                console.log(1 != '1');
+                console.log(1 !== '1');
             },
             snippet: `
 1 != '1'; // false (they are treated as equal)

@@ -4,11 +4,11 @@ export default {
     snippets: [
         {
             label: 'Using template literals for string interpolation',
-            output: (output) => {
+            output: (console) => {
                 let animal = 'pig';
                 let sound = 'oink';
                 let sentence = `${animal} says ${sound}!`;
-                output.log(sentence);
+                console.log(sentence);
             },
             snippet: `
 let animal = 'pig';
@@ -18,13 +18,13 @@ console.log(sentence);`,
         },
         {
             label: 'Building a string with multiple interpolations',
-            output: (output) => {
+            output: (console) => {
                 let item = 'cucumbers';
                 let price = 1.99;
                 let quantity = 4;
                 let total = price * quantity;
                 let res = `You bought ${quantity} ${item}. The total price is $${total}.`;
-                output.log(res);
+                console.log(res);
             },
             snippet: `
 let item = 'cucumbers';

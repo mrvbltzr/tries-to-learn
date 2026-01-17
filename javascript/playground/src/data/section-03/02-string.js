@@ -6,11 +6,11 @@ export default {
     snippets: [
         {
             label: 'Concatenate first name and last name to form a full name',
-            output: (output) => {
+            output: (console) => {
                 let firstName = 'Karen';
                 let lastName = 'Yuzuhira';
                 let fullName = firstName + ' ' + lastName;
-                output.log(fullName);
+                console.log(fullName);
             },
             snippet: `
 let firstName = 'Karen';
@@ -20,18 +20,18 @@ console.log(fullName);`,
         },
         {
             label: 'Using invalid arithmetic operators with strings',
-            output: (output) => {
-                output.log('Invalid' / 'Operators');
+            output: (console) => {
+                console.log('Invalid' / 'Operators');
             },
             snippet: `
 console.log('Invalid' / 'Operators');`,
         },
         {
             label: 'Demonstrating the string length property',
-            output: (output) => {
+            output: (console) => {
                 let myString = 'example';
                 let stringLength = myString.length;
-                output.log(stringLength);
+                console.log(stringLength);
             },
             snippet: `
 let myString = 'example';
@@ -40,13 +40,13 @@ console.log(stringLength);`,
         },
         {
             label: 'Accessing characters in a string using index',
-            output: (output) => {
+            output: (console) => {
                 let actress = 'Ranran Fujii';
-                output.log(actress[0]);
-                output.log(actress[1]);
-                output.log(actress[10]);
-                output.log(actress[12]);
-                output.log(actress[120]);
+                console.log(actress[0]);
+                console.log(actress[1]);
+                console.log(actress[10]);
+                console.log(actress[12]);
+                console.log(actress[120]);
             },
             snippet: `
 let actress = 'Ranran Fujii';
@@ -58,10 +58,10 @@ console.log(actress[120]);`,
         },
         {
             label: 'Accessing the last character of a string',
-            output: (output) => {
+            output: (console) => {
                 let gibberish = 'some gibberish';
                 let lastChar = gibberish[gibberish.length - 1];
-                output.log(lastChar);
+                console.log(lastChar);
             },
             snippet: `
 let gibberish = 'some gibberish';
@@ -70,10 +70,10 @@ console.log(lastChar);`,
         },
         {
             label: 'Demonstrating string immutability',
-            output: (output) => {
+            output: (console) => {
                 let faveActress = 'Fukada';
                 faveActress[0] = 'P';
-                output.log(faveActress);
+                console.log(faveActress);
             },
             snippet: `
 let faveActress = 'Fukada';
