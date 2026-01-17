@@ -1,0 +1,10 @@
+@import 'tailwindcss';
+
+:root {
+    --default-font-family: 'Google Sans';
+    --default-mono-font-family: 'Fira Mono';
+}
+
+html {
+    font-size: 0.8em;
+}
