@@ -33,13 +33,6 @@ export default defineConfig({
                     }
                 },
             },
-            onwarn: function (warning, warn) {
-                if (warning.code === 'EVAL' || warning.message.includes('reassign a variable')) {
-                    return;
-                }
-
-                warn(warning);
-            },
         },
     },
 });
