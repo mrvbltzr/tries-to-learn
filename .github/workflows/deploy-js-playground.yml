@@ -7,16 +7,12 @@ on:
       - 'javascript/playground/**'
 
 env:
-  ROOT_PATH: javascript/playground
+  PLAYGROUND: javascript/playground
 
 permissions:
   contents: write
 
-defaults:
-  run:
-    working-directory: ${{ env.ROOT_PATH }}
-
-jobs:
+jobs:   
   deploy:
     runs-on: ubuntu-latest
     if: "!contains(github.event.head_commit.message, '[skip ci]')"
@@ -30,18 +26,18 @@ jobs:
         with:
           node-version: 23
           cache: 'npm'
-          cache-dependency-path: ${{ env.ROOT_PATH }}/package-lock.json
+          cache-dependency-path: ${{ env.PLAYGROUND }}/package-lock.json
 
-      - name: Install Build Dependencies
-        run: npm ci --omit=dev
-
-      - name: Run 'build' command
-        run: npm run build
+      - name: Install dependencies then run 'build'
+        working-directory: ${{ env.PLAYGROUND }}
+        run: |
+          npm ci --omit=dev
+          npm run build
 
       - name: Deploy to GH Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: ${{ env.ROOT_PATH }}/dist
+          folder: ${{ env.PLAYGROUND }}/dist
           target-folder: javascript
           branch: gh-pages
           clean: false
