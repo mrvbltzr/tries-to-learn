@@ -68,5 +68,10 @@ export const getAllData = () => {
             collections: snippets['section-08'],
             exercises: exercises['section-08'],
         },
+        {
+            id: 9,
+            title: 'An Advanced Look at Functions',
+            collections: snippets['section-09'],
+        },
     ];
 };
