@@ -14,17 +14,17 @@ export const SectionNavigation = (data, section) => {
             href: `?section=${value.id}`,
             title: `Go to "${value.title}" section`,
             textContent: `[#${value.id}] ${value.title}`,
-            className: `flex items-center justify-center py-2 px-4 rounded-xl font-bold text-center text-slate-300 border ${border} ${bg} w-1/6`,
+            className: `flex items-center justify-center py-2 px-4 rounded-xl font-bold text-center text-slate-300 border ${border} ${bg}`,
         });
     });
 
     return el({
         tagName: 'div',
-        className: 'px-24 py-4 bg-slate-900',
+        className: 'px-8 py-4 bg-slate-900',
         children: [
             el({
                 tagName: 'div',
-                className: 'flex gap-5 text-sm',
+                className: 'flex flex-wrap w-full justify-center gap-3 text-sm',
                 children: links,
             }),
         ],
