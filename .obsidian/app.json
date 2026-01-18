@@ -1,10 +1,8 @@
 {
-  "useMarkdownLinks": true,
-  "showIndentGuide": false,
-  "useTab": false,
-  "promptDelete": false,
   "foldIndent": false,
-  "strictLineBreaks": true,
+  "promptDelete": false,
+  "showIndentGuide": true,
   "showLineNumber": true,
-  "showUnsupportedFiles": true
+  "useMarkdownLinks": true,
+  "useTab": false
 }
